@@ -23,12 +23,12 @@ dependencies:
   path_provider: ^2.1.4
 
   # Speech & input
-  speech_to_text: ^7.4.0
+  speech_to_text: ^7.5.0
   permission_handler: ^12.0.3
-  file_picker: ^8.1.0
+  file_picker: ^9.0.0
 
   # Export & share
-  share_plus: ^10.1.4
+  share_plus: ^11.0.0
   archive: ^3.6.1
   xml: ^6.5.0
   intl: ^0.20.2
@@ -44,9 +44,6 @@ dependencies:
 
   # Crypto for license codes
   crypto: ^3.0.5
-
-dependency_overrides:
-  speech_to_text: ^7.4.0
 
 dev_dependencies:
   flutter_test:
