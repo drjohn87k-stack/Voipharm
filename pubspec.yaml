@@ -45,6 +45,9 @@ dependencies:
   # Crypto for license codes
   crypto: ^3.0.5
 
+dependency_overrides:
+  speech_to_text: ^7.4.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
