@@ -1,3 +1,19 @@
+// 1. Force external plugins to resolve their own dependencies via Central/Google instead of JCenter
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Your existing root build.gradle contents follow below...
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 // Place this inside /android/build.gradle
 allprojects {
     buildscript {
