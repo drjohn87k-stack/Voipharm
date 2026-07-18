@@ -15,12 +15,19 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    // Fixed the enum reference here
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://bintray.com") } 
+        
+        // 1. Redirect any direct jcenter() calls from older packages to Central
+        maven {
+            url = uri("https://apache.org")
+            metadataSources {
+                mavenPom()
+                artifact()
+            }
+        }
     }
 }
 
