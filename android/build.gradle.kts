@@ -1,7 +1,18 @@
+// Place this inside /android/build.gradle
 allprojects {
+    buildscript {
+        repositories {
+            google()
+            mavenCentral()
+        }
+    }
     repositories {
         google()
         mavenCentral()
+        
+        // This structural workaround safely bypasses the missing jcenter() method 
+        // constraint enforced by modern Gradle engines
+        maven { url "https://bintray.com" }
     }
 }
 
