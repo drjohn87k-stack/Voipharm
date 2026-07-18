@@ -1,17 +1,1 @@
-name: Print Master License Code
 
-on:
-  workflow_dispatch:
-
-jobs:
-  print_master_code:
-    name: Print master license code (manual)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Compute master code (OpenSSL)
-        run: |
-          echo "Computing master license code..."
-          CODE=$(echo -n 'global-master-license-2025' | openssl dgst -sha256 -hmac 'MrR3qu3stVoiceApp-AbdullahAlshwerif-2025' \
-            | sed 's/^.*= //' | tr '[:lower:]' '[:upper:]' | cut -c1-16 \
-            | sed 's/^\(....\)\(....\)\(....\)\(....\)$/\1-\2-\3-\4/')
-          echo "Master code: $CODE"
