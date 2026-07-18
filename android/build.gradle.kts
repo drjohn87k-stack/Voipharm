@@ -12,7 +12,7 @@ allprojects {
         
         // This structural workaround safely bypasses the missing jcenter() method 
         // constraint enforced by modern Gradle engines
-        maven { url "https://bintray.com" }
+        maven { url; "https://bintray.com" }
     }
 }
 
