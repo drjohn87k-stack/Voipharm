@@ -15,11 +15,13 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    // 1. Force all plugins (including speech_to_text) to strictly use settings repositories
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        
+    }
+}
         // 1. Redirect any direct jcenter() calls from older packages to Central
         maven {
             url = uri("https://apache.org")
@@ -28,8 +30,6 @@ dependencyResolutionManagement {
                 artifact()
             }
         }
-    }
-}
 
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
