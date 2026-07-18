@@ -23,7 +23,8 @@ dependencies:
   path_provider: ^2.1.4
 
   # Speech & input
-  speech_to_text: ^7.5.0
+  # pinned to a resolvable version to fix `flutter pub get` errors
+  speech_to_text: ^6.6.2
   permission_handler: ^12.0.3
   file_picker: ^9.0.0
 
