@@ -17,6 +17,17 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PRESERVE_EXISTING)
+    repositories {
+        google()
+        mavenCentral()
+        // Adds an explicit mapping to resolve jcenter calls from old packages
+        maven { url "https://bintray.com" }
+    }
+}
+
+
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
     id("com.android.application") version "8.11.1" apply false
