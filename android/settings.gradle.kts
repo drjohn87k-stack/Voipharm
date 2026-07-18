@@ -15,11 +15,11 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    // 1. Force plugins to ignore their own jcenter() declarations
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // Use PREFER_PROJECT to allow plugins to add their own repositories
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
-        mavenCentral() // 2. Clean up and let Central handle the legacy packages safely
+        mavenCentral()
     }
 }
 
