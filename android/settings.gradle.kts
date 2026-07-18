@@ -23,7 +23,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         // Adds an explicit mapping to resolve jcenter calls from old packages
-        maven { url "https://bintray.com" }
+        maven { url; "https://bintray.com" }
     }
 }
 
